@@ -1,0 +1,136 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: #333; /* Fondo gris oscuro */
+    width: 100%;
+}
+
+.logo-container {
+    text-align: center; /* Centra el logo */
+    padding: 20px;
+    background-color: white; /* Fondo blanco para la imagen del logo */
+}
+
+.mobile-navbar {
+    display: flex;
+    justify-content: space-between; /* Para alinear la logo y el botón de cierre */
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar-list {
+    display: flex;
+    justify-content: center; /* Centra los elementos en la barra de navegación */
+    gap: 20px; /* Espacio entre los elementos */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+.navbar-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar-link:hover {
+    text-decoration: underline;
+}
+
+.product-container {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    max-width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra el contenido en pantallas grandes */
+    text-align: center; /* Alineación central del texto */
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.carousel-container, .product-info {
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .product-container {
+        flex-direction: row;
+        justify-content: space-between; /* Deja espacio entre imagen y texto */
+    }
+    .carousel-container, .product-info {
+        flex: 1 1 45%; /* Ajuste para imagen y texto en columnas */
+        text-align: left;
+    }
+
+    .navbar-list {
+        justify-content: center; /* Asegura que los enlaces se centren en pantallas más grandes */
+        width: 100%; /* Asegura que ocupe el 100% del ancho */
+    }
+}
+
+.product-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #222;
+}
+
+.product-description {
+    font-size: 18px;
+    color: #555;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e63946;
+    margin-bottom: 15px;
+}
+
+.buy-btn {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: #fff;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.buy-btn:hover {
+    background: linear-gradient(135deg, #f7407d, #ec2f62);
+    transform: scale(1.05);
+}
+
+.carousel-inner img {
+    max-width: 20%; /* Reduce el tamaño en PC */
+    height: auto; /* Mantiene proporciones */
+    object-fit: contain; /* Evita recortes innecesarios */
+    margin: auto; /* Centra la imagen */
+}
+
+@media (max-width: 768px) {
+    .carousel-inner img {
+        max-width: 100%; /* Ajuste para móviles */
+    }
+}
+
